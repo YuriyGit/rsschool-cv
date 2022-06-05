@@ -23,7 +23,8 @@
 > ![check_mark](img/check_mark.png) Css  
 > ![check_mark](img/check_mark.png) Version control: Git  
 > ![check_mark](img/check_mark.png) Figma (only for web development)  
-> ![check_mark](img/check_mark.png) React (began to study)
+> ![check_mark](img/check_mark.png) JavaScript (began to study)  
+> ![check_mark](img/check_mark.png) React (began to study)  
 
 ***
 
@@ -60,4 +61,3 @@ removeSymbol("Далеко-далеко, за словесными.");
 
 ## English:
 A
-***
