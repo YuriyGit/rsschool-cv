@@ -5,26 +5,95 @@
 	<meta name = "viewport"
 			content = "width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
 	<meta http-equiv = "X-UA-Compatible" content = "ie=edge">
-	<link rel = "stylesheet" href = "style.css">
+	<link rel = "stylesheet" href = "style/style.css">
 	<title>RsSchool-cv-html</title>
 </head>
 <body>
-
 
 <header class = "header">
 	<div class = "container">
 		<nav class = "nav">
 			<ul class = "nav-list">
-				<li class = "nav-item"><a href = "" class = "nav-link">Contacts</a></li>
-				<li class = "nav-item"><a href = "" class = "nav-link">About Me</a></li>
-				<li class = "nav-item"><a href = "" class = "nav-link">Skills</a></li>
-				<li class = "nav-item"><a href = "" class = "nav-link">Code Example</a></li>
-				<li class = "nav-item"><a href = "" class = "nav-link">English</a></li>
+				<li class = "nav-item"><a href = "#" class = "nav-link">Contacts</a></li>
+				<li class = "nav-item"><a href = "#" class = "nav-link">About Me</a></li>
+				<li class = "nav-item"><a href = "#" class = "nav-link">Skills</a></li>
+				<li class = "nav-item"><a href = "#" class = "nav-link">Code Example</a></li>
+				<li class = "nav-item"><a href = "#" class = "nav-link">English</a></li>
 			</ul>
 		</nav>
 	</div>
 </header>
 
+<main class = "main">
+	<div class = "container">
+		<section class = "section contacts">
+			
+			<h2 class = "section-title">Contacts</h2>
+			<ul>
+				<li>E-mail: <a href = "mailto:Yuriy.Mayorov@mail.ru" target = "_blank">Yuriy.Mayorov@mail.ru</a></li>
+				<li>Discord: <a href = "#" target = "_blank">Yuriy</a></li>
+				<li>Telegram: <a href = "#" target = "_blank">Yuriy</a></li>
+			</ul>
+		</section>
+		
+		<section class = "section about-me">
+			<h2 class = "section-title">About Me</h2>
+			<p class = "description">
+				I`m 35 years old. I want to change profession to web developer. While in the learning phase
+			</p>
+		</section>
+		
+		<section class = "section skills">
+			<h2 class = "section-title">Skills</h2>
+			<ul>
+				<li>Html</li>
+				<li>Css</li>
+				<li>Version control: Git</li>
+				<li>Figma (only for web development)</li>
+				<li>JavaScript (began to study)</li>
+				<li> React (began to study)</li>
+			</ul>
+		</section>
+		
+		<section class = "section code-example">
+			<h2 class = "section-title">Code Example</h2>
+			<pre>
+				<code>
+					/*Напишите скрипт, который в заданном тексте удалит два символа, выбранных случайно*/
+					
+					function randomNumber(num) {    //получаем случайное число до числа num
+						let random = Math.random() * (num + 1);
+						return Math.floor(random);
+					}
+					
+					//////////////////////
+					
+					function removeSymbol(str, count = 2) {
+						const alwaysEmpty = str === '' || str.length <= count;
+						if (!alwaysEmpty) {
+							let result = str;
+							for (let i = 0; i < count; i++) {
+								let len = result.length;
+								let randomNum = randomNumber(len);
+								result = result.slice(0, randomNum) + result.slice(randomNum + 1);
+							}
+							return (result);
+						} else {
+							return ("");
+						}
+					}
+					
+					removeSymbol("Далеко-далеко, за словесными.");
+				</code>
+			</pre>
+		</section>
+		
+		<section class = "section english">
+			<h2 class = "section-title">English</h2>
+			<p>A</p>
+		</section>
+	</div>
+</main>
 
 </body>
 </html>
