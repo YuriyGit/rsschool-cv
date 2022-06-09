@@ -14,12 +14,12 @@
 
 :focus,
 :active {
-/ / outline: none;
+ outline: none;
 }
 
 a:focus,
 a:active {
-/ / outline: none;
+ outline: none;
 }
 
 aside,
@@ -37,7 +37,7 @@ body {
 
 body {
     line-height: 1;
-/ / text-rendering: optimizeLegibility;
+ text-rendering: optimizeLegibility;
     -ms-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;

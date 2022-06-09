@@ -1,10 +1,14 @@
+@import "variables.css";
+
+/*style*/
 html {
     scroll-behavior: smooth;
+    scroll-padding-top:var(--height-header) ;
 }
+
 body {
     background: #FFE073;
     font-size: 18px;
-    scroll-behavior: smooth;
 }
 
 .container {
@@ -13,17 +17,26 @@ body {
     margin: 0 auto;
 }
 
+.section {
+    margin-top: 30px;
+    padding-left: 40px;
+    height:100vh;
+}
+
 /*header style*/
 .header {
     position: sticky;
     top: 0;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    height: 40px;
+    height: var(--height-header);
     background: #FF9C00;
 }
-
+.logo-img{
+    height: calc(var(--height-header) - 10px);
+    margin-left: 40px;
+}
 .nav {
     width: 50%;
 }
@@ -39,4 +52,9 @@ body {
 
 .nav-link {
     color: #A63C00;
+}
+
+.nav-link:hover {
+    color: #ffff;
+    transition: 0.25s;
 }
