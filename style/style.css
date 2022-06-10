@@ -25,13 +25,13 @@ body {
 
 /*////////////////header style////////////////*/
 .header {
+    background: #FF9C00;
     position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: var(--height-header);
-    background: #FF9C00;
 }
 
 .logo-img {
