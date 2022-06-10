@@ -3,7 +3,7 @@
 /*style*/
 html {
     scroll-behavior: smooth;
-    scroll-padding-top:var(--height-header) ;
+    scroll-padding-top: calc(var(--height-header) + 10px);
 }
 
 body {
@@ -19,11 +19,11 @@ body {
 
 .section {
     margin-top: 30px;
-    padding-left: 40px;
-    height:100vh;
+    padding: 0 40px;
+    min-height: 50vh;
 }
 
-/*header style*/
+/*////////////////header style////////////////*/
 .header {
     position: sticky;
     top: 0;
@@ -33,10 +33,12 @@ body {
     height: var(--height-header);
     background: #FF9C00;
 }
-.logo-img{
+
+.logo-img {
     height: calc(var(--height-header) - 10px);
     margin-left: 40px;
 }
+
 .nav {
     width: 50%;
 }
@@ -57,4 +59,34 @@ body {
 .nav-link:hover {
     color: #ffff;
     transition: 0.25s;
+}
+
+.nav-link:active {
+    color: #A65E00;
+}
+
+ /*////////////////main style////////////////*/
+.main {
+    display: grid;
+    grid-template-columns:20% 80%;
+}
+
+.left-side {
+    background-color: red;
+}
+.code-example code{
+    font-size: 16px;
+}
+
+
+/*////////////////footer style////////////////*/
+.footer{
+    background: #FF9C00;
+    /*position: fixed;*/
+    bottom: 0;
+    height: var(--height-header);
+    width: 100%;
+}
+.logo-rs-school {
+    width: 50px;
 }

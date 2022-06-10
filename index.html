@@ -26,77 +26,89 @@
 	</header>
 	
 	<main class = "main">
-		<section class = "section contacts" id = "contacts">
+		<div class = "left-side"></div>
+		<div class = "right-side">
+			<section class = "section contacts" id = "contacts">
+				
+				<h2 class = "section-title">Contacts</h2>
+				<ul>
+					<li>E-mail: <a href = "mailto:Yuriy.Mayorov@mail.ru" target = "_blank">Yuriy.Mayorov@mail.ru</a>
+					</li>
+					<li>Discord: <a href = "#" target = "_blank">Yuriy</a></li>
+					<li>Telegram: <a href = "#" target = "_blank">Yuriy</a></li>
+				</ul>
+			</section>
 			
-			<h2 class = "section-title">Contacts</h2>
-			<ul>
-				<li>E-mail: <a href = "mailto:Yuriy.Mayorov@mail.ru" target = "_blank">Yuriy.Mayorov@mail.ru</a></li>
-				<li>Discord: <a href = "#" target = "_blank">Yuriy</a></li>
-				<li>Telegram: <a href = "#" target = "_blank">Yuriy</a></li>
-			</ul>
-		</section>
-		
-		<section class = "section about-me" id = "about-me">
-			<h2 class = "section-title">About Me</h2>
-			<p class = "description">
-				I`m 35 years old. I want to change profession to web developer. While in the learning phase
-			</p>
-		</section>
-		
-		<section class = "section skills" id = "skills">
-			<h2 class = "section-title">Skills</h2>
-			<ul>
-				<li>Html</li>
-				<li>Css</li>
-				<li>Version control: Git</li>
-				<li>Figma (only for web development)</li>
-				<li>JavaScript (began to study)</li>
-				<li> React (began to study)</li>
-			</ul>
-		</section>
-		
-		<section class = "section code-example" id = "code-example">
-			<h2 class = "section-title">Code Example</h2>
-			<pre>
+			<section class = "section about-me" id = "about-me">
+				<h2 class = "section-title">About Me</h2>
+				<p class = "description">
+					I`m 35 years old. I want to change profession to web developer. While in the learning phase
+				</p>
+			</section>
+			
+			<section class = "section skills" id = "skills">
+				<h2 class = "section-title">Skills</h2>
+				<ul>
+					<li>Html</li>
+					<li>Css</li>
+					<li>Version control: Git</li>
+					<li>Figma (only for web development)</li>
+					<li>JavaScript (began to study)</li>
+					<li> React (began to study)</li>
+				</ul>
+			</section>
+			
+			<section class = "section code-example" id = "code-example">
+				<h2 class = "section-title">Code Example</h2>
+				<pre>
 				<code>
-					/*Напишите скрипт, который в&nbsp;заданном тексте удалит два символа, выбранных случайно*/
-					
-					function randomNumber(num) { //получаем случайное число до&nbsp;числа num
-						let random = Math.random() * (num + 1);
-						return Math.floor(random);
-					}
-					
-					//////////////////////
-					
-					function removeSymbol(str, count = 2) {
-						const alwaysEmpty = str === &rsquo;&rsquo; || str.length &lt;= count;
-						if (!alwaysEmpty) {
-							let result = str;
-							for (let i = 0; i &lt;&lt;&lt; count; i++) {
-								let len = result.length;
-								let randomNum = randomNumber(len);
-								result = result.slice(0, randomNum) + result.slice(randomNum + 1);
-							}
-							return (result);
-						} else {
-							return (&quot;&quot;);
-						}
-					}
-					
-					removeSymbol(&quot;Далеко-далеко, за&nbsp;словесными.&quot;);
+/*
+1. Напишите скрипт на&nbsp;JS, который в&nbsp;заданном тексте удалит два символа, выбранных случайно.
+a. Усложнение: удалять можно только буквы в&nbsp;словах, а&nbsp;знаки пунктуации и&nbsp;цифры удалять нельзя
+*/
+
+function randomNumber(num) { //получаем случайное число до&nbsp;числа num
+let random = Math.random() * (num + 1);
+return Math.floor(random);
+}
+//////////////////////
+function removeSymbol(str, count = 2) {
+const alwaysEmpty = str === &rsquo;&rsquo; || str.length &lt;= count;
+const regexp = /[a-zа-я]+/gi;
+const isLetters = str.match(regexp);
+if (!isLetters &amp;&amp;&nbsp;alwaysEmpty) {
+  return (str);
+} else {
+  let result = str;
+  let i = 0;
+  while (i &lt; count) {
+    let len = result.length; // длина строки
+    let randomNum = randomNumber(len);// случайное число в&nbsp;диапазоне длины строки
+    if&nbsp;(result[randomNum].match(regexp)) {//проверка символа
+      result = result.slice(0, randomNum) + result.slice(randomNum + 1);
+      i++;
+    }
+  }
+  return (result);
+  }
+}
+removeSymbol(&quot; Напишите скрипт на&nbsp;который Lorem ipsum dolor sit amet.&nbsp;| 1234567890 !@#$%^&amp;*()_+?&gt;&lt;.&rsquo;\&quot;&quot;);
 				</code>
 			</pre>
-		</section>
-		
-		<section class = "section english" id = "english">
-			<h2 class = "section-title">English</h2>
-			<p>A</p>
-		</section>
+			</section>
+			
+			<section class = "section english" id = "english">
+				<h2 class = "section-title">English</h2>
+				<p>A</p>
+			</section>
+		</div>
 	</main>
+	
 	<footer class = "footer">
-		<div class = "logo"><img src = "img/svg/rs_school_js.svg" alt = "logo-rsschool"></div>
+		<div class = "logo-rs-school"><img src = "images/svg/rs_school_js.svg" alt = "logo-rsschool"></div>
 		<a href = "https://github.com/YuriyGit">GitHub</a>
 		<a href = "https://rs.school/js/" target = "_blank">Курс «JavaScript/Front-end»</a>
+		<span>2022</span>
 	</footer>
 </div>
 </body>
