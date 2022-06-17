@@ -82,10 +82,7 @@ html {
 .main .container {
     display: flex;
     justify-content: space-between;
-
 }
-
-
 
 /*/////left-side/////*/
 .left-side {
@@ -97,6 +94,11 @@ html {
     border: 3px solid var(--container-bg-color);
     width: 90%;
     margin: 0 10px;
+}
+
+.main-title {
+    margin-top: 10px;
+    text-align: center;
 }
 
 /*/////right-side/////*/
@@ -114,16 +116,16 @@ html {
     line-height: 1.5;
     min-height: 25vh;
 }
- h2{
+
+h2 {
     font-size: 24px;
-     font-weight: bold;
+    font-weight: bold;
 }
- .code{
-     color:#ffffff;
-     background: #101026;
- }
 
-
+.code {
+    color: #ffffff;
+    background: #101026;
+}
 
 /*//////////footer//////////*/
 .footer {
@@ -153,7 +155,8 @@ html {
 .github-logo-img {
     height: calc(var(--height-header-and-footer) - 10px);
 }
-.fa-brands::before{
+
+.fa-brands::before {
     content: "\f09b";
 }
 
